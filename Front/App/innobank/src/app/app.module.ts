@@ -6,7 +6,12 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Encuesta1PageModule } from '../pages/encuesta1/encuesta1.module';
-import { InfousuarioPageModule } from '../pages/infousuario/infousuario.module';
+
+import { InfousuarioPageModule } from '../pages/infousuario/infousuario.module'
+import { MisPageModule } from '../pages/mis/mis.module'
+import { NviajePageModule } from '../pages/nviaje/nviaje.module'
+import { PromosPageModule} from '../pages/promos/promos.module'
+import { TabsPage } from '../pages/tabs/tabs'
 import { HttpClientModule } from '@angular/common/http';
 import { ServicesViajesServiceProvider } from '../providers/services-viajes-service/services-viajes-service';
 import { CatalogoPage } from "../pages/catalogo/catalogo";
@@ -15,20 +20,25 @@ import { CatalogoPage } from "../pages/catalogo/catalogo";
   declarations: [
     MyApp,
     HomePage,
-    CatalogoPage
+    CatalogoPage,
+    TabsPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     Encuesta1PageModule,
     InfousuarioPageModule,
-    HttpClientModule
+    HttpClientModule,
+    MisPageModule,
+    NviajePageModule,
+    PromosPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    CatalogoPage
+    CatalogoPage,
+    TabsPage
   ],
   providers: [
     StatusBar,
