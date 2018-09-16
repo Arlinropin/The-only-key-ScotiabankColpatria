@@ -7,17 +7,12 @@
 
 
 <ion-content padding>
-  
+
   <ion-list>
     <!-- <ion-list-header>
       <h3>VIAJES DISPONIBLES</h3>
     </ion-list-header> -->
         <!-- <button ion-button color="primary" (click)="comprarViaje()">Comprar</button> -->
-        <ion-fab left bottom>
-          <button ion-fab color="light" (click)="comprarViaje()">
-            <ion-icon name="logo-usd"></ion-icon>
-          </button>
-        </ion-fab>
     <a ion-item padding *ngFor="let v of viajesArray" (click)="openModal(v)">
       <ion-icon color="primary" item-right [name]="v.icon"></ion-icon>
         {{ v.destinationCity | uppercase }}
@@ -32,6 +27,11 @@
     </a>
   </ion-list>
 
+  <ion-fab left bottom>
+    <button ion-fab color="light" (click)="comprarViaje()">
+      <ion-icon name="logo-usd"></ion-icon>
+    </button>
+  </ion-fab>
   <ion-fab right bottom>
       <button ion-fab color="light" (click)="goHome()">
         <ion-icon name="home"></ion-icon>

@@ -12,12 +12,27 @@
           <ion-icon name="map"></ion-icon>
         </button>
       </ion-fab>
-    
+
       <ion-fab right bottom>
         <button ion-fab color="light" (click)="goHome()">
           <ion-icon name="home"></ion-icon>
         </button>
       </ion-fab>
+
+      <ion-list>
+        <a ion-item padding (click)="openModal(viajesArray)">
+          <ion-icon color="primary" item-right [name]="viajesArray.icon"></ion-icon>
+          {{ viajesArray.destinationCity | uppercase }}
+          <ion-grid>
+            <ion-row *ngIf="viajesArray.show">
+              <ion-col>Fecha Ida: {{viajesArray.startDate}}</ion-col>
+              <ion-col>Fecha Regreso: {{viajesArray.endDate}}</ion-col>
+              <ion-col>Millas: {{viajesArray.milesQty}}</ion-col>
+              <ion-col>Precio USD: {{viajesArray.milesQty * 2}}</ion-col>
+            </ion-row>
+          </ion-grid>
+        </a>
+      </ion-list>
 
       <ion-fab center bottom>
           <button ion-fab color="light"><ion-icon name="md-share"></ion-icon></button>
