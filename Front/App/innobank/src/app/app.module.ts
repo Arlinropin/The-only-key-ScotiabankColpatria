@@ -23,6 +23,7 @@ import { ServiciosPageModule } from "../pages/servicios/servicios.module";
     MyApp,
     HomePage,
     TabsPage
+    
   ],
   imports: [
     BrowserModule,

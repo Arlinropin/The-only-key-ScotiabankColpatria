@@ -1,42 +1,58 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
-    <!-- <ion-buttons start>
+     <ion-buttons start>
       <button ion-button (click)="goInfousuario()">
         <ion-icon large side=left name="person"></ion-icon>
       </button>
     </ion-buttons> -->
-    <ion-title text-center>
+<!-- <ion-title text-center>
       Innobank
-    </ion-title>
-    <!-- <ion-buttons end>
+    </ion-title> -->
+<!-- <ion-buttons end>
       <button ion-button (click)="goVendesp()">
         <ion-icon side=rigth name="search"></ion-icon>
       </button>
-    </ion-buttons> -->
+    </ion-buttons> 
   </ion-navbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
 
-  <ion-card>
+  <ion-card center middle>
 
     <img src="../../assets/imgs/foto.jpg" />
 
-    <ion-card-content>
+  <ion-card-content>
       <ion-card-title color="white">
         Juanito Delgado
       </ion-card-title>
       <p color="white">
-        Aventurero
+        Tarjeta <b>Premium</b>
       </p>
-      <ion-fab center bottom>
-        <button ion-fab color="light" (click)="goInfousuario()">
-          <ion-icon name="trophy"></ion-icon>
-        </button>
-      </ion-fab>
+      
     </ion-card-content>
+  </ion-card>
 
-    <!-- <ion-item>
+
+  <ion-fab center bottom>
+    <button ion-fab color="light" (click)="goInfousuario()">
+      <ion-icon name="trophy"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <ion-fab left bottom>
+    <button ion-fab color="light" (click)="goCatalogo()">
+      <ion-icon name="star"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <ion-fab right bottom>
+    <button ion-fab color="light" (click)="goMis()">
+      <ion-icon name="plane"></ion-icon>
+    </button>
+  </ion-fab>
+  
+  <!-- <ion-item>
       <ion-icon name='musical-notes' item-start style="color: #d03e84"></ion-icon>
       Albums
       <ion-badge item-end>9</ion-badge>
@@ -48,6 +64,6 @@
       <ion-badge item-end>260k</ion-badge>
     </ion-item> -->
 
-  </ion-card>
+  
 
 </ion-content>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, AlertController} from 'ionic-angular';
 import { ServicesViajesServiceProvider } from '../../providers/services-viajes-service/services-viajes-service';
-
+import{HomePage} from '../home/home';
 /**
  * Generated class for the CatalogoPage page.
  *
@@ -53,7 +53,7 @@ export class CatalogoPage {
     }
   }
 
-  comprarViaje() {
+  comprarViaje(){
     var viaje = JSON.parse(window.localStorage.viaje);
     this.viajesServices.postViaje(viaje).subscribe(
       (res) => {
@@ -69,5 +69,11 @@ export class CatalogoPage {
       }
     )
   }
+
+
+  goHome():void{
+    this.navCtrl.push(HomePage);
+  }
+  
 
 }

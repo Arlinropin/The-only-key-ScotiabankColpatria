@@ -13,8 +13,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-infousuario',
   templateUrl: 'infousuario.html',
 })
-export class InfousuarioPage {
 
+
+
+
+export class InfousuarioPage {
+  
   slides = [
     {
       title: "Categoria",
@@ -32,5 +36,5 @@ export class InfousuarioPage {
     //   image: "assets/img/ica-slidebox-img-3.png",
     // }
 ];
-
+  
 }

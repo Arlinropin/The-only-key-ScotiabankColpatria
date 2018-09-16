@@ -22,4 +22,8 @@ export class ServicesViajesServiceProvider {
     return this.http.post('http://127.0.0.1:5000/viajes', viaje);
   }
 
+  // getViajesComprados() {
+  //   return this.http.get()
+  // }
+
 }
