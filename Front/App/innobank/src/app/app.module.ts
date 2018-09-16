@@ -6,13 +6,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Encuesta1PageModule } from '../pages/encuesta1/encuesta1.module';
-import { InfousuarioPageModule } from '../pages/infousuario/infousuario.module'
+import { InfousuarioPageModule } from '../pages/infousuario/infousuario.module';
+import { HttpClientModule } from '@angular/common/http';
+import { ServicesViajesServiceProvider } from '../providers/services-viajes-service/services-viajes-service';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    
+
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import { InfousuarioPageModule } from '../pages/infousuario/infousuario.module'
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ServicesViajesServiceProvider
   ]
 })
 export class AppModule {}
