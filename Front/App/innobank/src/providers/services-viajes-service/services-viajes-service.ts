@@ -15,7 +15,7 @@ export class ServicesViajesServiceProvider {
   }
 
   getViajes(){
-    return this.http.get('http://192.168.20.147:5000/viajes')
+    return this.http.get('http://127.0.0.1:5000/viajes');
   }
 
 }

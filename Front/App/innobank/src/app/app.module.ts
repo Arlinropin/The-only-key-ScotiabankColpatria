@@ -9,23 +9,26 @@ import { Encuesta1PageModule } from '../pages/encuesta1/encuesta1.module';
 import { InfousuarioPageModule } from '../pages/infousuario/infousuario.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ServicesViajesServiceProvider } from '../providers/services-viajes-service/services-viajes-service';
+import { CatalogoPage } from "../pages/catalogo/catalogo";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-
+    CatalogoPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     Encuesta1PageModule,
-    InfousuarioPageModule
+    InfousuarioPageModule,
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
+    CatalogoPage
   ],
   providers: [
     StatusBar,

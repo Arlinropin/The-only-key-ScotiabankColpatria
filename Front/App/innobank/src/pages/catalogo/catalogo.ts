@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController} from 'ionic-angular';
 import { ServicesViajesServiceProvider } from '../../providers/services-viajes-service/services-viajes-service';
 
 /**
@@ -19,13 +19,14 @@ export class CatalogoPage {
   viajes: any[] = [];
 
   constructor(
-    public viajesServices: ServicesViajesServiceProvider
+    public viajesServices: ServicesViajesServiceProvider,
+    public navCtrl: NavController
   ) { this.loadInfo()}
 
-  loadInfo(){
+  loadInfo() {
     this.viajesServices.getViajes().subscribe(
       (data) => {
-        this.viajes = data.viajes;
+        this.viajes = data['viajes'];
       },
       (error) => {
         console.error(error);
