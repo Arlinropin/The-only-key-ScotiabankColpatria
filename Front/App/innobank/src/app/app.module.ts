@@ -14,8 +14,9 @@ import { PromosPageModule} from '../pages/promos/promos.module'
 import { TabsPage } from '../pages/tabs/tabs'
 import { HttpClientModule } from '@angular/common/http';
 import { ServicesViajesServiceProvider } from '../providers/services-viajes-service/services-viajes-service';
-import { CatalogoPage } from "../pages/catalogo/catalogo";
 import {CatalogoPageModule} from "../pages/catalogo/catalogo.module";
+import { ServiciosPageModule } from "../pages/servicios/servicios.module";
+
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import {CatalogoPageModule} from "../pages/catalogo/catalogo.module";
     CatalogoPageModule,
     MisPageModule,
     NviajePageModule,
-    PromosPageModule
+    PromosPageModule,
+    ServiciosPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

@@ -13,25 +13,46 @@ import { ServicesViajesServiceProvider } from '../../providers/services-viajes-s
 @Component({
   selector: 'page-catalogo',
   templateUrl: 'catalogo.html',
+  providers: [ServicesViajesServiceProvider]
 })
 export class CatalogoPage {
 
-  viajes: any[] = [];
+  public viajesArray: any[] = [];
 
   constructor(
     public viajesServices: ServicesViajesServiceProvider,
     public navCtrl: NavController
-  ) { this.loadInfo()}
+  ) { this.loadInfo() }
 
   loadInfo() {
     this.viajesServices.getViajes().subscribe(
-      (data) => {
-        this.viajes = data['viajes'];
+      (viajesResp) => {
+        this.viajesArray = viajesResp['viajes'];
+        this.viajesArray.forEach(function (viaje, i) {
+          viaje.show = false;
+          viaje.icon = 'ios-arrow-dropright';
+        })
       },
       (error) => {
         console.error(error);
       }
     )
+  }
+
+  openModal(v) {
+    if (v.show) {
+      v.show = false;
+      v.icon = 'ios-arrow-dropright';
+    } else {
+      v.show = true;
+      v.icon = 'ios-arrow-dropup';
+      var str = JSON.stringify(v);
+      window.localStorage.viaje = str;
+    }
+  }
+
+  comprarViaje() {
+    console.log(JSON.parse(window.localStorage.viaje));
   }
 
 }
