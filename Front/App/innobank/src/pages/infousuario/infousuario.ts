@@ -23,7 +23,7 @@ export class InfousuarioPage {
     },
     {
       title: "Puntos y millas",
-      description:  ,
+      description:  "H",
       image: "../../assets/imgs/avion.png",
     }
     // {
