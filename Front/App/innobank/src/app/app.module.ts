@@ -7,23 +7,31 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Encuesta1PageModule } from '../pages/encuesta1/encuesta1.module';
 import { InfousuarioPageModule } from '../pages/infousuario/infousuario.module'
+import { MisPageModule } from '../pages/mis/mis.module'
+import { NviajePageModule } from '../pages/nviaje/nviaje.module'
+import { PromosPageModule} from '../pages/promos/promos.module'
+import { TabsPage } from '../pages/tabs/tabs'
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    
+    TabsPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     Encuesta1PageModule,
-    InfousuarioPageModule
+    InfousuarioPageModule,
+    MisPageModule,
+    NviajePageModule,
+    PromosPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
+    TabsPage
   ],
   providers: [
     StatusBar,
