@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { MisPage } from '../mis/mis';
 import { HomePage } from '../home/home'
 import { CatalogoPage } from '../catalogo/catalogo'
+
 import { ServiciosPage } from '../servicios/servicios'
 
 @Component({

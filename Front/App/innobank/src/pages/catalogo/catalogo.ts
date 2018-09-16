@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController} from 'ionic-angular';
+import { IonicPage, NavController, AlertController} from 'ionic-angular';
 import { ServicesViajesServiceProvider } from '../../providers/services-viajes-service/services-viajes-service';
 
 /**
@@ -18,10 +18,12 @@ import { ServicesViajesServiceProvider } from '../../providers/services-viajes-s
 export class CatalogoPage {
 
   public viajesArray: any[] = [];
+  public resp: any;
 
   constructor(
     public viajesServices: ServicesViajesServiceProvider,
-    public navCtrl: NavController
+    public navCtrl: NavController,
+    private alertCtrl: AlertController
   ) { this.loadInfo() }
 
   loadInfo() {
@@ -52,7 +54,20 @@ export class CatalogoPage {
   }
 
   comprarViaje() {
-    console.log(JSON.parse(window.localStorage.viaje));
+    var viaje = JSON.parse(window.localStorage.viaje);
+    this.viajesServices.postViaje(viaje).subscribe(
+      (res) => {
+        this.resp = res;
+      },
+      (error) => {
+        let alert = this.alertCtrl.create({
+          title: 'Exitoso!',
+          subTitle: 'Vuelo reservado exitosamente!',
+          buttons: ['Ok']
+        });
+        alert.present();
+      }
+    )
   }
 
 }

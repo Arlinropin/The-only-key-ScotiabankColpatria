@@ -10,31 +10,21 @@
   </ion-navbar>
 </ion-header>
 
-<!--ion-content padding>
-  <ion-list>
-    <ion-list-header>
-        <h3>VIAJES DISPONIBLES</h3>
-    </ion-list-header>
-    <a ion-item *ngFor="let v of viajesArray" (click)="openModal(v)">
-      {{ v.destino }}
-    </a>
-  </ion-list>
-</ion-content-->
-
 <ion-content padding>
   <ion-list>
     <ion-list-header>
       <h3>VIAJES DISPONIBLES</h3>
     </ion-list-header>
-    <button ion-button color="primary" (click)="comprarViaje()">Secondary</button>
+    <button ion-button color="primary" (click)="comprarViaje()">Comprar</button>
     <a ion-item padding *ngFor="let v of viajesArray" (click)="openModal(v)">
       <ion-icon color="primary" item-right [name]="v.icon"></ion-icon>
-        {{ v.destino | uppercase }}
+        {{ v.destinationCity | uppercase }}
       <ion-grid>
         <ion-row *ngIf="v.show">
-          <ion-col>Fecha Ida: {{v.fecha_inicio}}</ion-col>
-          <ion-col>Fecha Regreso: {{v.fecha_fin}}</ion-col>
-          <ion-col>Precio USD: {{v.precio}}</ion-col>
+          <ion-col>Fecha Ida: {{v.startDate}}</ion-col>
+          <ion-col>Fecha Regreso: {{v.endDate}}</ion-col>
+          <ion-col>Millas: {{v.milesQty}}</ion-col>
+          <ion-col>Precio USD: {{v.milesQty * 2}}</ion-col>
         </ion-row>
       </ion-grid>
     </a>

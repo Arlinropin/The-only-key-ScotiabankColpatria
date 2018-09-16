@@ -18,6 +18,8 @@ export class ServicesViajesServiceProvider {
     return this.http.get('http://127.0.0.1:5000/viajes');
   }
 
-
+  postViaje(viaje:any) {
+    return this.http.post('http://127.0.0.1:5000/viajes', viaje);
+  }
 
 }
