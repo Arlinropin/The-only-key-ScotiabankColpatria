@@ -18,12 +18,12 @@ export class InfousuarioPage {
   slides = [
     {
       title: "Categoria",
-      description: " showcases a number of useful components that are included out of the box with Ionic.",
+      description: "¡Felicitaciones! Tienes el más alto nivel. Podrás obtener las mejores ofertas de redención de puntos para que sigas viajando como quieras, cuando quieras.",
       image: "../../assets/imgs/usuario.png",
     },
     {
       title: "Puntos y millas",
-      description:  ,
+      description: "Tienes <b> 1000 puntos</b> equivalentes a <b>500 millas</b>.",
       image: "../../assets/imgs/avion.png",
     }
     // {
