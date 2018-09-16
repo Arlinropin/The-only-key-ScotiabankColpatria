@@ -15,6 +15,7 @@ import { TabsPage } from '../pages/tabs/tabs'
 import { HttpClientModule } from '@angular/common/http';
 import { ServicesViajesServiceProvider } from '../providers/services-viajes-service/services-viajes-service';
 import { CatalogoPage } from "../pages/catalogo/catalogo";
+import { ServiciosPageModule } from "../pages/servicios/servicios.module";
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CatalogoPage } from "../pages/catalogo/catalogo";
     HttpClientModule,
     MisPageModule,
     NviajePageModule,
-    PromosPageModule
+    PromosPageModule,
+    ServiciosPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

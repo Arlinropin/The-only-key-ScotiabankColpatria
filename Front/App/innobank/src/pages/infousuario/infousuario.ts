@@ -22,9 +22,9 @@ export class InfousuarioPage {
       image: "../../assets/imgs/usuario.png",
     },
     {
-      title: "What is Ionic?",
-      description: "<b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.",
-      image: "assets/img/ica-slidebox-img-2.png",
+      title: "Puntos y millas",
+      description:  ,
+      image: "../../assets/imgs/avion.png",
     }
     // {
     //   title: "What is Ionic Cloud?",
