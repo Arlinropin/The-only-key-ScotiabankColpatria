@@ -15,12 +15,12 @@ import { TabsPage } from '../pages/tabs/tabs'
 import { HttpClientModule } from '@angular/common/http';
 import { ServicesViajesServiceProvider } from '../providers/services-viajes-service/services-viajes-service';
 import { CatalogoPage } from "../pages/catalogo/catalogo";
+import {CatalogoPageModule} from "../pages/catalogo/catalogo.module";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    CatalogoPage,
     TabsPage
   ],
   imports: [
@@ -29,6 +29,7 @@ import { CatalogoPage } from "../pages/catalogo/catalogo";
     Encuesta1PageModule,
     InfousuarioPageModule,
     HttpClientModule,
+    CatalogoPageModule,
     MisPageModule,
     NviajePageModule,
     PromosPageModule
@@ -37,7 +38,6 @@ import { CatalogoPage } from "../pages/catalogo/catalogo";
   entryComponents: [
     MyApp,
     HomePage,
-    CatalogoPage,
     TabsPage
   ],
   providers: [
