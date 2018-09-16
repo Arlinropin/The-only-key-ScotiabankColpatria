@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ServicesViajesServiceProvider } from '../../providers/services-viajes-service/services-viajes-service';
 
 /**
  * Generated class for the CatalogoPage page.
@@ -15,11 +16,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CatalogoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  viajes: any[] = [];
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CatalogoPage');
+  constructor(
+    public viajesServices: ServicesViajesServiceProvider
+  ) { this.loadInfo()}
+
+  loadInfo(){
+    this.viajesServices.getViajes().subscribe(
+      (data) => {
+        this.viajes = data.viajes;
+      },
+      (error) => {
+        console.error(error);
+      }
+    )
   }
 
 }
