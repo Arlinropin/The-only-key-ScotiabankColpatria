@@ -1,0 +1,7 @@
+{
+  "name": "innobank",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
