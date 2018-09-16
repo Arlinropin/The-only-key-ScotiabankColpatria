@@ -5,6 +5,7 @@ import { InfousuarioPage} from '../infousuario/infousuario';
 
 
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -18,10 +19,8 @@ export class HomePage {
   goEncuesta():void{
     this.navCtrl.push(Encuesta1Page);
   }
-
   goInfousuario():void{
     this.navCtrl.push(InfousuarioPage);
   }
-
 
 }

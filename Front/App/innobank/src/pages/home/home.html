@@ -1,10 +1,10 @@
 <ion-header>
-  <ion-navbar color=rgb(224,224,224,0.6)>
-    <ion-buttons start>
+  <ion-navbar>
+    <!-- <ion-buttons start>
       <button ion-button (click)="goInfousuario()">
         <ion-icon large side=left name="person"></ion-icon>
       </button>
-    </ion-buttons>
+    </ion-buttons> -->
     <ion-title text-center>
       Innobank
     </ion-title>
@@ -16,16 +16,38 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  
-    <button ion-button full (click)="goEncuesta()">Iniciar</button>
-  
+<ion-content>
+
+  <ion-card>
+
+    <img src="../../assets/imgs/foto.jpg" />
+
+    <ion-card-content>
+      <ion-card-title color="white">
+        Juanito Delgado
+      </ion-card-title>
+      <p color="white">
+        Aventurero
+      </p>
+      <ion-fab center bottom>
+        <button ion-fab color="light" (click)="goInfousuario()">
+          <ion-icon name="trophy"></ion-icon>
+        </button>
+      </ion-fab>
+    </ion-card-content>
+
+    <!-- <ion-item>
+      <ion-icon name='musical-notes' item-start style="color: #d03e84"></ion-icon>
+      Albums
+      <ion-badge item-end>9</ion-badge>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='logo-twitter' item-start style="color: #55acee"></ion-icon>
+      Followers
+      <ion-badge item-end>260k</ion-badge>
+    </ion-item> -->
+
+  </ion-card>
+
 </ion-content>
-
-
-
-
-
-
-  
-

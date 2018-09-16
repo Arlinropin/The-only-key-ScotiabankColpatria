@@ -6,41 +6,40 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Encuesta1PageModule } from '../pages/encuesta1/encuesta1.module';
-<<<<<<< HEAD
+
 import { InfousuarioPageModule } from '../pages/infousuario/infousuario.module'
 import { MisPageModule } from '../pages/mis/mis.module'
 import { NviajePageModule } from '../pages/nviaje/nviaje.module'
 import { PromosPageModule} from '../pages/promos/promos.module'
 import { TabsPage } from '../pages/tabs/tabs'
-=======
-import { InfousuarioPageModule } from '../pages/infousuario/infousuario.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ServicesViajesServiceProvider } from '../providers/services-viajes-service/services-viajes-service';
->>>>>>> d22d721a935f7c26f395ffff442c8025833debdc
+import { CatalogoPage } from "../pages/catalogo/catalogo";
+import { ServiciosPageModule } from "../pages/servicios/servicios.module";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-<<<<<<< HEAD
+    CatalogoPage,
     TabsPage
-=======
-
->>>>>>> d22d721a935f7c26f395ffff442c8025833debdc
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     Encuesta1PageModule,
     InfousuarioPageModule,
+    HttpClientModule,
     MisPageModule,
     NviajePageModule,
-    PromosPageModule
+    PromosPageModule,
+    ServiciosPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
+    CatalogoPage,
     TabsPage
   ],
   providers: [
